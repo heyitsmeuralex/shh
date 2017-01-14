@@ -1,6 +1,5 @@
 const PIXI = require('pixi.js')
 const Player = require('./objects/Player')
-const Wall = require('./objects/Wall')
 
 let renderer = new PIXI.WebGLRenderer(256, 256, {
   roundPixels: true,
@@ -28,16 +27,6 @@ document.body.appendChild(renderer.view)
 // Where every sprite lives: the stage
 let stage = new PIXI.Container()
 let objects = []
-
-// Create some walls
-let walls = [
-  new Wall(24, 24, 600, 60),
-  new Wall(24, 24, 60, 400),
-]
-
-for (let wall of walls) {
-  stage.addChild(wall)
-}
 
 // Create the player
 let player = new Player()
