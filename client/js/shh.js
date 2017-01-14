@@ -1,4 +1,6 @@
 const PIXI = require('pixi.js')
+const kd = require('keydrown')
+
 const Player = require('./objects/Player')
 const Wall = require('./objects/Wall')
 
@@ -31,8 +33,9 @@ let objects = []
 
 // Create some walls
 let walls = [
-  new Wall(24, 24, 600, 60),
-  new Wall(24, 24, 60, 400),
+  new Wall(24, 24, 600, 30),
+  new Wall(24, 24, 30, 400),
+  new Wall(300, 230, 300, 250)
 ]
 
 for (let wall of walls) {
@@ -46,8 +49,12 @@ objects.push(player)
 
 // Render loop
 window.requestAnimationFrame(function render(timestamp) {
+  kd.tick()
+
   for (let object of objects) {
-    object.update()
+    object.update({
+      kd
+    })
   }
 
   renderer.render(stage)
