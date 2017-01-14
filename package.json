@@ -1,0 +1,24 @@
+{
+  "name": "shh",
+  "version": "0.1.0",
+  "description": "be quiet.",
+  "private": true,
+  "main": "server/shh.js",
+  "repository": "https://github.com/nanalan/shh.git",
+  "author": "Alex <16batesa@gmail.com> (https://alex.bates.is/)",
+  "license": "MIT",
+  "devDependencies": {
+    "browserify": "^13.3.0",
+    "nodemon": "^1.11.0",
+    "watchify": "^3.8.0"
+  },
+  "scripts": {
+    "build": "browserify client/js/shh.js --list -o client/shh.js",
+    "watch": "watchify client/js/shh.js --verbose -o client/shh.js",
+    "server": "nodemon server/shh.js"
+  },
+  "dependencies": {
+    "express": "^4.14.0",
+    "pixi.js": "^4.3.2"
+  }
+}
