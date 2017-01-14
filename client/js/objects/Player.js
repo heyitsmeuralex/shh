@@ -21,7 +21,7 @@ module.exports = class Player extends PIXI.Graphics {
     this.x++
     this.y++
 
-    this.clear()
+    //this.clear()
 
     // Rotate towards mouse
     let targetRotation = Math.atan2(this.mouse.y - this.y, this.mouse.x - this.x)
