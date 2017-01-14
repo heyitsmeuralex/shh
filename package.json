@@ -13,7 +13,7 @@
     "watchify": "^3.8.0"
   },
   "scripts": {
-    "build": "browserify client/js/shh.js --list -o client/shh.js",
+    "build": "browserify client/js/shh.js -o client/shh.js",
     "watch": "watchify client/js/shh.js --verbose -o client/shh.js",
     "server": "nodemon server/shh.js"
   },
